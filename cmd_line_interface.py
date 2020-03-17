@@ -97,9 +97,11 @@ exit
                     mean = self.statistics.calculate_spent_months_mean(date.fromisoformat(answer[1]))
                 elif len(answer) == 3:
                     (months, money) = self.statistics.calculate_spent_per_month(
-                            date.fromisoformat(answer[1]), date.fromisoformat(answer[2]))
+                            date.fromisoformat(answer[1]),
+                            date.fromisoformat(answer[2]))
                     mean = self.statistics.calculate_spent_months_mean(
-                            date.fromisoformat(answer[1]), date.fromisoformat(answer[2]))
+                            date.fromisoformat(answer[1]),
+                            date.fromisoformat(answer[2]))
 
                 print("----  Statistics  ----")
                 for month, dolla in zip(months, money):
